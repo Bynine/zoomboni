@@ -84,7 +84,7 @@ public abstract class State : MonoBehaviour
     }
 
     
-    internal bool CheckGround(float height = 0.5f, float range = 0.95f, float distanceToFloor = 0.95f, bool checkSlope = true, Vector3 mod = new Vector3()) {
+    internal bool CheckGround(float height = 0.5f, float range = 0.75f, float distanceToFloor = 0.65f, bool checkSlope = true, Vector3 mod = new Vector3()) {
         float rangeCC = range * player.cc.radius;
         float heightCC = height * player.cc.height;
         float distanceCC = distanceToFloor * player.cc.height;

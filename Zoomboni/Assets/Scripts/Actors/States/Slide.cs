@@ -22,7 +22,7 @@ public class Slide : State
     [SerializeField] private float SPEED_SLOPE_MUL = 1.0f;
     [SerializeField] private float MOMENTUM_SLOPE_RESIST = 0.1f;
     [SerializeField] private float DISTANCE_CHECK_SLOPE = 1.7f;
-    [SerializeField] private float DISTANCE_APPLY_STICKY;
+    [SerializeField] private float DISTANCE_STAY_SLIDING;
 
     private bool shouldIApplyStartPower = false;
 
@@ -85,9 +85,9 @@ public class Slide : State
 
         if (!CheckGround())
         {
-            if (CheckGround(distanceToFloor: DISTANCE_APPLY_STICKY))
+            if (CheckGround(distanceToFloor: DISTANCE_STAY_SLIDING))
             {
-                applySticky = true;
+
             }
             else
             {
