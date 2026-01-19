@@ -38,7 +38,6 @@ public class Player : Character
         base.Awake();
         inputMove = playerInput.actions.FindAction("Move");
         inputSlide = playerInput.actions.FindAction("Slide");
-        print(inputSlide);
     }
 
     private void Update()
@@ -58,6 +57,8 @@ public class Player : Character
             Quaternion rotationTarget = Quaternion.LookRotation(crossVector, normalRotation) * Quaternion.Euler(0, 90, 0);
             containerForModel.transform.rotation = Quaternion.Lerp(containerForModel.transform.rotation, rotationTarget, lerpRotation * Time.deltaTime);
         }
+
+        //containerForModel.transform.up = Vector3.down;
     }
 
     private void UpdateInputs()

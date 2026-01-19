@@ -9,9 +9,12 @@ public class Sit : State
 
     [SerializeField] private float FRICTION = 1.0f;
 
+    [SerializeField] private float STICKY;
+    [SerializeField] private float GRAV;
+
     public override void Enter(Component arg)
     {
-        player.containerForModel.transform.localScale = new Vector3(0.9f, 1.1f, 0.9f);
+        player.containerForModel.transform.localScale = new Vector3(1.1f, 0.9f, 0.9f);
     }
 
     public override void Exit()
@@ -21,7 +24,6 @@ public class Sit : State
 
     public override void GraphicsUpdate()
     {
-
         player.UpdateContainerForModelRotation();
     }
 
@@ -30,6 +32,7 @@ public class Sit : State
         Vector3 velocity = new Vector3(player.cc.velocity.x, player.cc.velocity.y, player.cc.velocity.z);
 
         velocity = ApplyFriction(velocity, FRICTION);
+        velocity = ApplyGravitySticky(velocity, GRAV, STICKY);
 
         player.cc.Move(velocity * Time.deltaTime);
     }
@@ -44,7 +47,6 @@ public class Sit : State
 
         if ( !CheckGround())
         {
-
             stateMachine.Change(stateAirborne);
         }
 

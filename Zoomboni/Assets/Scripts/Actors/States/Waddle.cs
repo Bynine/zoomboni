@@ -10,9 +10,11 @@ public class Waddle : State
     [SerializeField] private State stateSit;
     [SerializeField] private State stateAirborne;
 
+    [SerializeField] private float STICKY;
+    [SerializeField] private float GRAV;
+
     public override void Enter(Component arg)
     {
-
         player.containerForModel.transform.localScale = new Vector3(1f, 1f, 1f);
     }
 
@@ -32,6 +34,7 @@ public class Waddle : State
 
         velocity = ApplyAcc(velocity, ACCELERATION);
         velocity = ApplyFriction(velocity, FRICTION);
+        velocity = ApplyGravitySticky(velocity, GRAV, STICKY);
 
         player.cc.Move(velocity * Time.deltaTime);
     }

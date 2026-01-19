@@ -25,7 +25,6 @@ public class Slide : State
     [SerializeField] private float DISTANCE_APPLY_STICKY;
 
     private bool shouldIApplyStartPower = false;
-    private bool applySticky = false;
 
     public override void Enter(Component arg)
     {
@@ -41,7 +40,7 @@ public class Slide : State
 
     public override void GraphicsUpdate()
     {
-
+        player.UpdateContainerForModelRotation();
     }
 
     public override void PhysicsUpdate()
@@ -67,19 +66,12 @@ public class Slide : State
         if (shouldIApplyStartPower)
         {
             Vector3 startPower = player.containerForModel.transform.forward * START_POWER;
+            startPower.y = -START_POWER;
             velocity += startPower;
             shouldIApplyStartPower = false;
         }
 
-        if (applySticky)
-        {
-            velocity.y = STICKY;
-            applySticky = false;
-        }
-        else
-        {
-            velocity = ApplyGravity(velocity, GRAV);
-        }
+        velocity = ApplyGravitySticky(velocity, GRAV, STICKY);
 
         player.cc.Move(velocity * Time.deltaTime);
     }

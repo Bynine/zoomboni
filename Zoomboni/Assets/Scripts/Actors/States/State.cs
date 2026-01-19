@@ -8,6 +8,7 @@ public abstract class State : MonoBehaviour
 
     public Player player;
     protected StateMachine stateMachine;
+    protected bool applySticky = false;
 
     public void Awake() {
         stateMachine = GetComponentInParent<StateMachine>();
@@ -56,6 +57,18 @@ public abstract class State : MonoBehaviour
         return velocity;
     }
 
+    internal Vector3 ApplyGravitySticky(Vector3 velocity, float GRAV, float STICKY)
+    {
+        if (applySticky) {
+            velocity.y = STICKY;
+        }
+        else
+        {
+            velocity = ApplyGravity(velocity, GRAV);
+        }
+        return velocity;
+    }
+
     internal Vector3 ApplyFriction(Vector3 velocity, float FRIC) {
         float fricFrame = GetFrictionFrame(FRIC);
 
@@ -71,7 +84,7 @@ public abstract class State : MonoBehaviour
     }
 
     
-    internal bool CheckGround(float height = 0.5f, float range = 0.95f, float distanceToFloor = 0.65f, bool checkSlope = true, Vector3 mod = new Vector3()) {
+    internal bool CheckGround(float height = 0.5f, float range = 0.95f, float distanceToFloor = 0.95f, bool checkSlope = true, Vector3 mod = new Vector3()) {
         float rangeCC = range * player.cc.radius;
         float heightCC = height * player.cc.height;
         float distanceCC = distanceToFloor * player.cc.height;

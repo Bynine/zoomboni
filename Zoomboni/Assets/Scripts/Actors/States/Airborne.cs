@@ -10,7 +10,7 @@ public class Airborne : State
     [SerializeField] private float FRICTION = 1.0f;
     public override void Enter(Component arg)
     {
-
+        player.containerForModel.transform.localScale = new Vector3(0.8f, 1.3f, 0.8f);
     }
 
     public override void Exit()
@@ -25,7 +25,6 @@ public class Airborne : State
 
     public override void PhysicsUpdate()
     {
-
         Vector3 velocity = new Vector3(player.cc.velocity.x, player.cc.velocity.y, player.cc.velocity.z);
 
         velocity = ApplyGravity(velocity, GRAVITY);
