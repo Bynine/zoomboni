@@ -1523,7 +1523,7 @@ MonoBehaviour:
   SPEED_SLOPE_MUL: 1
   MOMENTUM_SLOPE_RESIST: 0.2
   DISTANCE_CHECK_SLOPE: 1.7
-  DISTANCE_APPLY_STICKY: 1
+  DISTANCE_STAY_SLIDING: 0
 --- !u!1 &1171556728
 GameObject:
   m_ObjectHideFlags: 0
@@ -1664,7 +1664,7 @@ Transform:
   m_GameObject: {fileID: 1216226321}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 1.5, z: 5}
+  m_LocalPosition: {x: -3.93, y: 1.5, z: -0.57}
   m_LocalScale: {x: 4, y: 0.5, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
