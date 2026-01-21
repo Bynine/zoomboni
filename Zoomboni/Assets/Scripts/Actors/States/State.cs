@@ -84,15 +84,30 @@ public abstract class State : MonoBehaviour
     }
 
     
-    internal bool CheckGround(float height = 0.55f, float range = 0.75f, float distanceToFloor = 0.65f, bool checkSlope = true, Vector3 mod = new Vector3()) {
-        float rangeCC = range * player.cc.radius;
-        float heightCC = height * player.cc.height;
-        float distanceCC = distanceToFloor * player.cc.height;
+    internal bool CheckGround(bool checkSlope = true, Vector3 mod = new Vector3()) {
+        float rangeCC = player.GROUND_RANGE * player.cc.radius;
+        float heightCC = player.GROUND_HEIGHT * player.cc.height;
+        float distanceCC = player.DISTANCE_TO_FLOOR * player.cc.height;
 
-        float a = CheckFloorHelper(new Vector3(rangeCC, heightCC, rangeCC) + mod, Vector3.down, distanceCC, checkSlope);
-        float b = CheckFloorHelper(new Vector3(-rangeCC, heightCC, rangeCC) + mod, Vector3.down, distanceCC, checkSlope);
-        float c = CheckFloorHelper(new Vector3(rangeCC, heightCC, -rangeCC) + mod, Vector3.down, distanceCC, checkSlope);
-        float d = CheckFloorHelper(new Vector3(-rangeCC, heightCC, -rangeCC) + mod, Vector3.down, distanceCC, checkSlope);
+        float a = CheckFloorHelper(
+            new Vector3(rangeCC, heightCC, rangeCC) 
+            + mod, Vector3.down, 
+            distanceCC, checkSlope);
+
+        float b = CheckFloorHelper(
+            new Vector3(-rangeCC, heightCC, rangeCC)
+            + mod, Vector3.down, 
+            distanceCC, checkSlope);
+
+        float c = CheckFloorHelper(
+            new Vector3(rangeCC, heightCC, -rangeCC) 
+            + mod, Vector3.down, 
+            distanceCC, checkSlope);
+
+        float d = CheckFloorHelper(
+            new Vector3(-rangeCC, heightCC, -rangeCC) 
+            + mod, Vector3.down, 
+            distanceCC, checkSlope);
 
         float[] values;
         float[] smalues = { a,b,c,d };
@@ -121,7 +136,8 @@ public abstract class State : MonoBehaviour
         }
     }
 
-    internal RaycastHit CheckSurface(Vector3 distanceFromTransform, Vector3 direction, float distance, bool debugOn = false) {
+    internal RaycastHit CheckSurface(
+        Vector3 distanceFromTransform, Vector3 direction, float distance, bool debugOn = false) {
         Ray ray = new Ray(player.transform.position + distanceFromTransform, direction);
         Physics.Raycast(
             ray, 

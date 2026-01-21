@@ -26,12 +26,15 @@ public class Slide : State
 
     [SerializeField] private Timer timerLand;
 
+    [SerializeField] private AudioSource sfxStart;
+
     private bool shouldIApplyStartPower = false;
 
     public override void Enter(Component statePrior)
     {
-
         shouldIApplyStartPower = !(statePrior is Airborne);
+        if (shouldIApplyStartPower) sfxStart.Play();
+
         if (statePrior is Airborne)
         {
             if (player.cc.velocity.y < 0)
