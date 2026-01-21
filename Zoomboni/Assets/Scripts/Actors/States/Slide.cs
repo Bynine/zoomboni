@@ -3,8 +3,9 @@ using UnityEngine;
 public class Slide : State
 {
 
-    [SerializeField] private State stateWaddle;
-    [SerializeField] private State stateAirborne;
+    [SerializeField] internal State stateWaddle;
+    [SerializeField] internal State stateAirborne;
+    [SerializeField] internal State stateBrake;
 
     [SerializeField] private float START_POWER;
 
@@ -101,6 +102,11 @@ public class Slide : State
         if (!CheckGround())
         {
             stateMachine.Change(stateAirborne);
+        }
+
+        if (player.inputSlide.WasPressedThisFrame())
+        {
+            stateMachine.Change(stateBrake, this);
         }
     }
 

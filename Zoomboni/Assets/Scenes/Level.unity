@@ -1815,9 +1815,53 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1051007896999308849, guid: 74b6463178d93c6469f1e20e3927d88b, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 9ba7c39dcd48b6547a7d4a35f1a14bc0, type: 2}
+    - target: {fileID: 1860872773746108351, guid: 74b6463178d93c6469f1e20e3927d88b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860872773746108351, guid: 74b6463178d93c6469f1e20e3927d88b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.459
+      objectReference: {fileID: 0}
     - target: {fileID: 2855591140011226404, guid: 74b6463178d93c6469f1e20e3927d88b, type: 3}
       propertyPath: m_Name
       value: Zoomboni
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718004701371666877, guid: 74b6463178d93c6469f1e20e3927d88b, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718004701371666877, guid: 74b6463178d93c6469f1e20e3927d88b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718004701371666877, guid: 74b6463178d93c6469f1e20e3927d88b, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718004701371666877, guid: 74b6463178d93c6469f1e20e3927d88b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718004701371666877, guid: 74b6463178d93c6469f1e20e3927d88b, type: 3}
+      propertyPath: m_SpotAngle
+      value: 103.22727
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718004701371666877, guid: 74b6463178d93c6469f1e20e3927d88b, type: 3}
+      propertyPath: m_InnerSpotAngle
+      value: 25.870262
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718004701371666877, guid: 74b6463178d93c6469f1e20e3927d88b, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718004701371666877, guid: 74b6463178d93c6469f1e20e3927d88b, type: 3}
+      propertyPath: m_UseColorTemperature
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7025150443325492415, guid: 74b6463178d93c6469f1e20e3927d88b, type: 3}
       propertyPath: cam
@@ -1829,7 +1873,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8220747414377232953, guid: 74b6463178d93c6469f1e20e3927d88b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8220747414377232953, guid: 74b6463178d93c6469f1e20e3927d88b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1880,6 +1924,18 @@ PrefabInstance:
       propertyPath: Target.TrackingTarget
       value: 
       objectReference: {fileID: 590981603}
+    - target: {fileID: 798361838747856210, guid: 2ff89459cf60348489ac89d099ee9e88, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 798361838747856210, guid: 2ff89459cf60348489ac89d099ee9e88, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 798361838747856210, guid: 2ff89459cf60348489ac89d099ee9e88, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1658634041110622473, guid: 2ff89459cf60348489ac89d099ee9e88, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -1890,7 +1946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6496370078110794854, guid: 2ff89459cf60348489ac89d099ee9e88, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6496370078110794854, guid: 2ff89459cf60348489ac89d099ee9e88, type: 3}
       propertyPath: m_LocalPosition.z
