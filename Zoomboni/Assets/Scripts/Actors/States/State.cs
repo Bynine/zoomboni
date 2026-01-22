@@ -83,7 +83,33 @@ public abstract class State : MonoBehaviour
         return fricFrame;
     }
 
-    
+    internal bool CheckSlide()
+    {
+        float rangeCC = player.GROUND_RANGE * player.cc.radius;
+        float heightCC = player.GROUND_HEIGHT * player.cc.height;
+        float distanceCC = player.DISTANCE_TO_FLOOR * player.cc.height;
+
+        float stuckInTheMiddleWithYou = CheckFloorHelper(
+            new Vector3(0, heightCC, 0), Vector3.down,
+            distanceCC, true);
+
+        Vector3 frontFacing = Vector3.Cross(new Vector3(rangeCC, 0, rangeCC), player.GetFacing());
+        frontFacing.y += heightCC;
+        float heyDownInFront = CheckFloorHelper( frontFacing, Vector3.down,
+                                                    distanceCC, true);
+
+        Vector3 backFacing = Vector3.Cross(new Vector3(rangeCC, 0, rangeCC), -player.GetFacing());
+        backFacing.y += heightCC;
+        float itCameFromBehind = CheckFloorHelper( backFacing, Vector3.down,
+                                                    distanceCC, true);
+
+        float[] values;
+        float[] smalues = { stuckInTheMiddleWithYou, heyDownInFront, itCameFromBehind };
+        values = smalues;
+
+        return Mathf.Max(values) > -100;
+    }
+
     internal bool CheckGround(bool checkSlope = true, Vector3 mod = new Vector3()) {
         float rangeCC = player.GROUND_RANGE * player.cc.radius;
         float heightCC = player.GROUND_HEIGHT * player.cc.height;

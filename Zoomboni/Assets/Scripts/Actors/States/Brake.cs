@@ -4,8 +4,11 @@ public class Brake : Slide
 {
 
     [SerializeField] private State stateSlide;
+    [SerializeField] private State stateSit;
 
     [SerializeField] private ParticleSystem fx;
+
+    [SerializeField] private float MINIMUM_SPEED_BEFORE_SLIDE;
 
     public override void Enter(Component statePrior)
     {
@@ -29,7 +32,14 @@ public class Brake : Slide
 
         if (!player.inputSlide.IsPressed())
         {
-            stateMachine.Change(stateSlide, this);
+            if (player.cc.velocity.magnitude < MINIMUM_SPEED_BEFORE_SLIDE)
+            {
+                stateMachine.Change(stateSit);
+            }
+            else
+            {
+                stateMachine.Change(stateSlide);
+            }
         }
     }
 

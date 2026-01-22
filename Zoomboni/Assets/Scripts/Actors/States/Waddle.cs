@@ -5,6 +5,7 @@ public class Waddle : State
 
     [SerializeField] private float ACCELERATION = 1.0f;
     [SerializeField] private float FRICTION = 1.0f;
+    [SerializeField] private AudioSource sfxWaddleLoop;
 
     [SerializeField] private State stateSlide;
     [SerializeField] private State stateSit;
@@ -15,12 +16,12 @@ public class Waddle : State
 
     public override void Enter(Component statePrior)
     {
-
+        sfxWaddleLoop.Play();
     }
 
     public override void Exit()
     {
-
+        sfxWaddleLoop.Stop();
     }
 
     public override void GraphicsUpdate()

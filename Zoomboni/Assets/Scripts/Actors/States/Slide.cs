@@ -27,6 +27,7 @@ public class Slide : State
     [SerializeField] private Timer timerLand;
 
     [SerializeField] private AudioSource sfxStart;
+    [SerializeField] private AudioSource sfxLoop;
 
     private bool shouldIApplyStartPower = false;
 
@@ -48,12 +49,15 @@ public class Slide : State
 
             timerLand.End();
         }
+
+        sfxLoop.Play();
     }
 
     public override void Exit()
     {
         player.SetScale();
         timerLand.End();
+        sfxLoop.Stop();
     }
 
     public override void GraphicsUpdate()
@@ -69,7 +73,7 @@ public class Slide : State
         velocity = ApplyAcc(velocity, ACCELERATION);
         velocity = ApplyFriction(velocity, FRICTION);
 
-        RaycastHit hitGround = CheckSurface(new Vector3(0, 0.65f, 0), Vector3.down, DISTANCE_CHECK_SLOPE);
+        RaycastHit hitGround = CheckSurface(new Vector3(0, player.cc.height/2, 0), Vector3.down, DISTANCE_CHECK_SLOPE);
         if (hitGround.collider)
         {
             Vector3 normalGround = hitGround.normal;
@@ -102,7 +106,7 @@ public class Slide : State
             stateMachine.Change(stateWaddle);
         }
 
-        if (!CheckGround())
+        if (!CheckSlide())
         {
             stateMachine.Change(stateAirborne);
         }
