@@ -26,6 +26,7 @@ public class Brake : Slide
         base.Exit();
         fx.Stop();
         fxTurbo.Stop();
+        player.SetScale();
     }
 
     public override void GraphicsUpdate()
@@ -36,6 +37,8 @@ public class Brake : Slide
             fx.Stop();
             fxTurbo.Play();
         }
+
+        player.SetScale(0.4f);
     }
 
     public override void TransitionCheck()
@@ -48,7 +51,7 @@ public class Brake : Slide
 
         if (!player.inputSlide.IsPressed())
         {
-            if (!timerCharge.IsActive() && player.cc.velocity.magnitude < MINIMUM_SPEED_BEFORE_SLIDE)
+            if (timerCharge.IsActive() && player.cc.velocity.magnitude < MINIMUM_SPEED_BEFORE_SLIDE)
             {
                 stateMachine.Change(stateSit);
             }
