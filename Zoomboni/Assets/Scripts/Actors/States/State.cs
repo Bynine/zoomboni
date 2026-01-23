@@ -222,4 +222,9 @@ public abstract class State : MonoBehaviour
         player.SetScale(squash);
     }
 
+    internal bool HoldingMove()
+    {
+        return player.GetInputMovement().magnitude >= DEAD_ZONE;
+    }
+
 }

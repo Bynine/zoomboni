@@ -43,6 +43,10 @@ public class Brake : Slide
 
     public override void TransitionCheck()
     {
+        if (!HoldingMove())
+        {
+            timerCharge.Reset();
+        }
 
         if (!CheckGround())
         {
@@ -51,7 +55,10 @@ public class Brake : Slide
 
         if (!player.inputSlide.IsPressed())
         {
-            if (timerCharge.IsActive() && player.cc.velocity.magnitude < MINIMUM_SPEED_BEFORE_SLIDE)
+            if (
+                !HoldingMove() ||
+                (timerCharge.IsActive() && (player.cc.velocity.magnitude < MINIMUM_SPEED_BEFORE_SLIDE))
+                )
             {
                 stateMachine.Change(stateSit);
             }
