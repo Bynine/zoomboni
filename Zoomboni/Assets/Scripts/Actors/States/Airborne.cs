@@ -3,6 +3,8 @@ using UnityEngine;
 public class Airborne : State
 {
 
+    [SerializeField] private AudioSource sfxLoop;
+
     [SerializeField] private State stateLand;
 
     [SerializeField] private float GRAVITY = 1.0f;
@@ -10,11 +12,12 @@ public class Airborne : State
     [SerializeField] private float FRICTION = 1.0f;
     public override void Enter(Component statePrior)
     {
-
+        sfxLoop.Play();
     }
 
     public override void Exit()
     {
+        sfxLoop.Stop();
         player.SetScale();
     }
 
