@@ -10,7 +10,6 @@ public class Airborne : State
     [SerializeField] private float GRAVITY = 1.0f;
     [SerializeField] private float ACCELERATION = 1.0f;
     [SerializeField] private float FRICTION = 1.0f;
-    [SerializeField] private float RADIUS_CHECK_WALL = 1.0f;
     public override void Enter(Component statePrior)
     {
         sfxLoop.Play();
@@ -34,12 +33,6 @@ public class Airborne : State
     {
         Vector3 velocity = new Vector3(player.cc.velocity.x, player.cc.velocity.y, player.cc.velocity.z);
 
-        //if (Physics.CheckSphere(player.transform.position, RADIUS_CHECK_WALL) && velocity.magnitude < 1)
-        //{
-        //    print("Push away push away");
-        //    velocity -= player.directionContainerForModel;
-        //}
-
         velocity = ApplyGravity(velocity, GRAVITY);
         velocity = ApplyAcc(velocity, ACCELERATION);
         velocity = ApplyFriction(velocity, FRICTION);
@@ -54,7 +47,7 @@ public class Airborne : State
 
         if (isPlayerCloseToGround)
         {
-            stateMachine.Change(stateLand, this);
+            stateMachine.Change(stateLand);
         }
     }
 }
