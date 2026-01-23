@@ -3,25 +3,15 @@ using UnityEngine;
 public class Collectable : MonoBehaviour
 {
 
-    public int points = 10;
-    public Player player;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] private int points = 10;
 
     private void OnTriggerEnter(Collider other){
         if(other.CompareTag("Player")){
-            Debug.Log("Collected and item!");
+
+            Player player = other.GetComponentInParent<Player>();
             player.AddPoints(points);
             Destroy(gameObject);
         }
     }
+
 }

@@ -5083,7 +5083,7 @@ MonoBehaviour:
   stateBrake: {fileID: 2033783125199638335}
   START_POWER: 0
   BOOST_MOD: 3
-  BOOST_EXP: 2
+  BOOST_EXP: 4
   ACCELERATION: 7
   FRICTION: 0.98
   STICKY: -100
@@ -5103,7 +5103,7 @@ MonoBehaviour:
   stateSit: {fileID: 4895127026115802986}
   fx: {fileID: 2010679907639254254}
   fxTurbo: {fileID: 3330236968365011151}
-  MINIMUM_SPEED_BEFORE_SLIDE: 4
+  MINIMUM_SPEED_BEFORE_SLIDE: 6
   timerCharge: {fileID: 2232311923939671306}
 --- !u!1 &1417069543608147557
 GameObject:
@@ -5805,6 +5805,7 @@ MonoBehaviour:
   - {fileID: 4977391603830286632}
   - {fileID: 3009586430424134423}
   stateBounce: {fileID: 1398859446800550410}
+  scoreText: {fileID: 0}
 --- !u!1 &2921930454779937074
 GameObject:
   m_ObjectHideFlags: 0
@@ -11547,7 +11548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c7555f5db606748a283a65e22ec9bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
-  max: 36
+  max: 24
 --- !u!1 &8250595076696238490
 GameObject:
   m_ObjectHideFlags: 0

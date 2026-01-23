@@ -209,7 +209,7 @@ public class Player : Character
     }
     public void AddPoints(int points)
     {
-        score = score + points;
+        score += points;
         scoreText.text = "Score: " + score;
         Debug.Log(score);
     }
