@@ -36,6 +36,10 @@ public class LevelManager : MonoBehaviour
         {
             instance = this;
         }
+
+        QualitySettings.vSyncCount = 1;
+        Application.targetFrameRate = 60;
+
         scoreText.text = "Score: " + score;
         finishText.text = "";
         timerLevelDuration.Reset();
