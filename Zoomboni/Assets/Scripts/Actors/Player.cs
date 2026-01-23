@@ -40,6 +40,8 @@ public class Player : Character
     internal bool focusing = false;
     internal Quaternion baseModelRotation;
 
+    private int score = 0;
+
     private new void Awake()
     {
         base.Awake();
@@ -199,6 +201,11 @@ public class Player : Character
             stateMachine.Change(stateBounce); 
         }
         
+    }
+    public void AddPoints(int points)
+    {
+        score = score + points;
+        Debug.Log(score);
     }
 
 }
