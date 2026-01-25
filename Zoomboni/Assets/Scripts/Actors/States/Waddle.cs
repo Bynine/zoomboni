@@ -13,15 +13,19 @@ public class Waddle : State
 
     [SerializeField] private float STICKY;
     [SerializeField] private float GRAV;
+    [SerializeField] private float ANIM_SPEED = 1.0f;
 
     public override void Enter(Component statePrior)
     {
+        player.SetAnimation("Armature|waddle2");
         sfxWaddleLoop.Play();
+        player.SetAnimationSpeed(ANIM_SPEED);
     }
 
     public override void Exit()
     {
         sfxWaddleLoop.Stop();
+        player.SetAnimationSpeed();
     }
 
     public override void GraphicsUpdate()
@@ -50,10 +54,10 @@ public class Waddle : State
 
         if (player.inputSlide.WasPressedThisFrame())
         {
-            stateMachine.Change(stateSlide, this);
+            stateMachine.Change(stateSlide);
         }
 
-        if (!CheckSlide())
+        if (!CheckSlide() && !CheckGround())
         {
             stateMachine.Change(stateAirborne);
         }
