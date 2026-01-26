@@ -91,6 +91,11 @@ public class LevelManager : MonoBehaviour
                 );
             timeRemaining = Mathf.Clamp(timeRemaining, 0, int.MaxValue);
 
+            if (timerLevelDuration.GetPercent() >= 0.8f)
+            {
+                timeText.color = Color.red;
+            }
+
             timeText.text = "Time: " + timeRemaining;
 
             scoreText.text = "Score: " + score;

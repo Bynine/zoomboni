@@ -5,7 +5,10 @@ public class Airborne : State
 
     [SerializeField] private AudioSource sfxLoop;
 
+    [SerializeField] private Timer timerVolume;
+
     [SerializeField] private State stateLand;
+    [SerializeField] private State stateWallKick;
 
     [SerializeField] private float GRAVITY = 1.0f;
     [SerializeField] private float ACCELERATION = 1.0f;
@@ -21,6 +24,7 @@ public class Airborne : State
     public override void Enter(Component statePrior)
     {
         sfxLoop.Play();
+        timerVolume.Reset();
     }
 
     public override void Exit()
@@ -48,6 +52,7 @@ public class Airborne : State
 
         float pitch = Mathf.Lerp(PITCH_MIN, PITCH_MAX, t);
         sfxLoop.pitch = pitch;
+        sfxLoop.volume = Mathf.Clamp(timerVolume.GetPercent(), 0, 1) / 2.0f;
     }
 
     public override void PhysicsUpdate()
@@ -74,6 +79,11 @@ public class Airborne : State
         if (isPlayerCloseToGround)
         {
             stateMachine.Change(stateLand);
+        }
+
+        if (CanWallKick() && player.inputKick.WasPressedThisFrame())
+        {
+            stateMachine.Change(stateWallKick);
         }
     }
 }

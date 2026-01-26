@@ -227,4 +227,24 @@ public abstract class State : MonoBehaviour
         return player.GetInputMovement().magnitude >= DEAD_ZONE;
     }
 
+    internal bool CanWallKick(float MIN_ANGLE = 110f)
+    {
+        RaycastHit hit = CheckSurface(
+            new Vector3(0, player.cc.height / 2, 0), 
+            player.GetFacing(),
+            WallKick.DISTANCE_TO_CHECK,
+            true
+            );
+
+        if (hit.collider != null)
+        {
+            float angleDiff = Vector3.Angle(hit.normal, player.GetFacing());
+
+            return angleDiff > MIN_ANGLE;
+        }
+        else {
+            return false;
+        }
+    }
+
 }

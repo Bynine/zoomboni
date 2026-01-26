@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 45344f7ea484d6e49bc0811746185943, type: 2}
+  m_sharedMaterial: {fileID: -1138730027249770491, guid: 45344f7ea484d6e49bc0811746185943, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -343,8 +343,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 45344f7ea484d6e49bc0811746185943, type: 2}
+  m_sharedMaterial: {fileID: -1138730027249770491, guid: 45344f7ea484d6e49bc0811746185943, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -825,8 +825,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: FINISH!!!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 45344f7ea484d6e49bc0811746185943, type: 2}
+  m_sharedMaterial: {fileID: -1138730027249770491, guid: 45344f7ea484d6e49bc0811746185943, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1010,6 +1010,14 @@ PrefabInstance:
     - target: {fileID: 3187477043089446361, guid: 0abc4ad37b5e9084289eb03e1dd4d8ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3331248875395003570, guid: 0abc4ad37b5e9084289eb03e1dd4d8ff, type: 3}
+      propertyPath: IgnoreTag
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3331248875395003570, guid: 0abc4ad37b5e9084289eb03e1dd4d8ff, type: 3}
+      propertyPath: CollideAgainst.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
