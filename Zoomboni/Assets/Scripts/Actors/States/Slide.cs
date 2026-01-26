@@ -6,6 +6,7 @@ public class Slide : State
     [SerializeField] internal State stateWaddle;
     [SerializeField] internal State stateAirborne;
     [SerializeField] internal State stateBrake;
+    [SerializeField] internal State stateWallKick;
 
     [SerializeField] private float START_POWER;
     [SerializeField] private float BOOST_MOD = 3.0f;
@@ -142,6 +143,13 @@ public class Slide : State
         {
             stateMachine.Change(stateBrake);
         }
+
+        if (CanWallKick() && player.inputKick.WasPressedThisFrame())
+        {
+            stateMachine.Change(stateWallKick);
+        }
+
+
     }
 
 }

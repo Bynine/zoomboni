@@ -20,7 +20,8 @@ public class Player : Character
 
     internal InputAction
         inputMove,
-        inputSlide
+        inputSlide,
+        inputKick
         ;
 
     [SerializeField] internal GameObject containerForModel;
@@ -44,6 +45,7 @@ public class Player : Character
         base.Awake();
         inputMove = playerInput.actions.FindAction("Move");
         inputSlide = playerInput.actions.FindAction("Slide");
+        inputKick = playerInput.actions.FindAction("Kick");
         baseModelRotation = model.transform.rotation;
     }
 
@@ -116,6 +118,13 @@ public class Player : Character
         {
             directionContainerForModel = Vector3.Lerp(directionContainerForModel, directionMovement, t);
         }
+    }
+
+    internal void FlipModelRotation(Vector3 newVelocity)
+    {
+        Vector3 abba = newVelocity.normalized;
+        abba.y = 0;
+        directionContainerForModel = abba;
     }
 
     internal void SetScale(float squash = 0)
