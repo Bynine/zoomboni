@@ -9,6 +9,7 @@ public class Slide : State
     [SerializeField] internal State stateWallKick;
 
     [SerializeField] private float START_POWER;
+    [SerializeField] private float START_POWER_LANDING = 10.0f;
     [SerializeField] private float BOOST_MOD = 3.0f;
     [SerializeField] private float BOOST_EXP = 2.0f;
 
@@ -34,29 +35,32 @@ public class Slide : State
 
     [SerializeField] protected ParticleSystem fxSlide;
 
-    private float startPower = -1;
+    private float startPowerMod = -1;
 
     public override void Enter(Component statePrior)
     {
         player.SetAnimation("Armature|Slide");
 
-        startPower = -1f;
+        startPowerMod = -1f;
         if (statePrior is Brake)
         {
             Brake brake = (Brake)statePrior;
             float chargeTime = BOOST_MOD * Mathf.Pow(brake.GetChargeTime(), BOOST_EXP);
-            startPower = chargeTime;
+            startPowerMod = chargeTime;
         }
         else if (statePrior is Airborne)
         {
-            startPower = 0;
+            if (player.GetMovementLastFrame().y < -8f) {
+                // TODO: need to check if angle below would propel you forward. What does that look like?
+                startPowerMod = START_POWER_LANDING;
+            }
         }
         else
         {
-            startPower = 1;
+            startPowerMod = 1;
         }
 
-        if (startPower >= 1)
+        if (startPowerMod >= 1)
         {
             sfxStart.Play();
         }
@@ -100,31 +104,47 @@ public class Slide : State
         velocity = ApplyAcc(velocity, ACCELERATION);
         velocity = ApplyFriction(velocity, FRICTION);
 
-        RaycastHit hitGround = CheckSurface(new Vector3(0, player.cc.height/2, 0), Vector3.down, DISTANCE_CHECK_SLOPE);
-        if (hitGround.collider)
-        {
-            Vector3 normalGround = hitGround.normal;
-            Vector3 groundParallel = Vector3.Cross(transform.up, normalGround);
-            Vector3 slopeParallel = Vector3.Cross(groundParallel, normalGround);
-            float powSlope = 1.0f - Mathf.Clamp((velocity.magnitude - SPEED_SLOPE_MIN) * SPEED_SLOPE_MUL, 0, SPEED_SLOPE_POW);
-            float powSlopeLimiter = Mathf.Clamp(1 - (MOMENTUM_SLOPE_RESIST * velocity.magnitude), 0, 1);
+        Vector3 slopeParallel = GetSlopeBelow();
+        float powSlope = 1.0f - Mathf.Clamp((velocity.magnitude - SPEED_SLOPE_MIN) * SPEED_SLOPE_MUL, 0, SPEED_SLOPE_POW);
+        float powSlopeLimiter = Mathf.Clamp(1 - (MOMENTUM_SLOPE_RESIST * velocity.magnitude), 0, 1);
 
-            velocity += powSlope * slopeParallel * SLOPE_POWER * powSlopeLimiter;
-        }
+        velocity += powSlope * slopeParallel * SLOPE_POWER * powSlopeLimiter;
         velocity = ApplyForce(velocity);
 
-        if (startPower > 0)
+        if (startPowerMod > 0)
         {
             Vector3 startSpeed = player.containerForModel.transform.forward * START_POWER;
             startSpeed.y = -START_POWER;
-            velocity += startPower * startSpeed;
-            startPower = -1;
+            velocity += startPowerMod * startSpeed;
+            startPowerMod = -1;
+        }
 
+        // Forces player downward if they land on slope to propel them
+        else if (startPowerMod == -2f)
+        {
+            velocity.y -= 10f;
+            startPowerMod = 0;
         }
 
         velocity = ApplyGravitySticky(velocity, GRAV, STICKY);
 
         player.cc.Move(velocity * Time.deltaTime);
+    }
+
+    private Vector3 GetSlopeBelow()
+    {
+        RaycastHit hitGround = CheckSurface(new Vector3(0, player.cc.height / 2, 0), Vector3.down, DISTANCE_CHECK_SLOPE);
+        if (hitGround.collider)
+        {
+            Vector3 normalGround = hitGround.normal;
+            Vector3 groundParallel = Vector3.Cross(transform.up, normalGround);
+            Vector3 slopeParallel = Vector3.Cross(groundParallel, normalGround);
+            return slopeParallel;
+        }
+        else
+        {
+            return Vector3.up;
+        }
     }
 
     public override void TransitionCheck()
