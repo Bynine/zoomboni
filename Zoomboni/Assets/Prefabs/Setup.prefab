@@ -222,9 +222,9 @@ Canvas:
   m_GameObject: {fileID: 4353431657555141451}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_RenderMode: 1
+  m_Camera: {fileID: 5379831034309368193}
+  m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -757,7 +757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c7555f5db606748a283a65e22ec9bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
-  max: 3600
+  max: 5400
 --- !u!1 &7858004629320498734
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,7 +792,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 150}
+  m_AnchoredPosition: {x: 0, y: 180}
   m_SizeDelta: {x: 500, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1875144659893793730
@@ -1014,10 +1014,6 @@ PrefabInstance:
     - target: {fileID: 3331248875395003570, guid: 0abc4ad37b5e9084289eb03e1dd4d8ff, type: 3}
       propertyPath: IgnoreTag
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3331248875395003570, guid: 0abc4ad37b5e9084289eb03e1dd4d8ff, type: 3}
-      propertyPath: CollideAgainst.m_Bits
-      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

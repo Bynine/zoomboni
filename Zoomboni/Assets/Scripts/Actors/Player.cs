@@ -34,6 +34,7 @@ public class Player : Character
     internal Vector3 directionContainerForModel = new Vector3();
     internal Vector3 velocityFromForce = new Vector3();
     internal Vector3 directionMovement = new Vector3();
+    internal Vector3 movementLastFrame = new Vector3();
 
     internal const float OOB_FLOOR = -500.0f;
     internal Material mat_last_touched;
@@ -141,6 +142,12 @@ public class Player : Character
     public void LateUpdate()
     {
         velocityFromForce = new Vector3();
+        movementLastFrame = cc.velocity;
+    }
+
+    public Vector3 GetMovementLastFrame()
+    {
+        return movementLastFrame;
     }
 
     public Vector3 GetFacing()

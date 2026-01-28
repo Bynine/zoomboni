@@ -20,6 +20,8 @@ public class Airborne : State
 
     [SerializeField] private float MODEL_TURN_SPEED = 4.0f;
 
+    [SerializeField] private string animNeutral, animLeft, animRight;
+
     private Vector3 velocityPrior = new Vector3(), deltaVelocity = new Vector3();
     public override void Enter(Component statePrior)
     {
@@ -53,6 +55,21 @@ public class Airborne : State
         float pitch = Mathf.Lerp(PITCH_MIN, PITCH_MAX, t);
         sfxLoop.pitch = pitch;
         sfxLoop.volume = Mathf.Clamp(timerVolume.GetPercent(), 0, 1) / 2.0f;
+
+
+        Vector3 inputMovement = player.GetInputMovement();
+        if (Mathf.Sign(inputMovement.x) == -1)
+        {
+            player.SetAnimation(animLeft);
+        }
+        else if (Mathf.Sign(inputMovement.x) == 1)
+        {
+            player.SetAnimation(animRight);
+        }
+        else
+        {
+            player.SetAnimation(animNeutral);
+        }
     }
 
     public override void PhysicsUpdate()
