@@ -5257,6 +5257,9 @@ MonoBehaviour:
   PITCH_MAX: 2
   PITCH_RANGE: 8
   MODEL_TURN_SPEED: 4
+  animNeutral: Armature|Sit (Cooler)
+  animLeft: Armature|Sit (Cooler)
+  animRight: Armature|Sit (Cooler)
 --- !u!1 &1736657008485724924
 GameObject:
   m_ObjectHideFlags: 0
@@ -16922,6 +16925,9 @@ MonoBehaviour:
   PITCH_MAX: 2
   PITCH_RANGE: 16
   MODEL_TURN_SPEED: 1.4
+  animNeutral: Armature|Slide
+  animLeft: Armature|TurnLeft
+  animRight: Armature|TurnRight
 --- !u!1 &8289607607796856987
 GameObject:
   m_ObjectHideFlags: 0
