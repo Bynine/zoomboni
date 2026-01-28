@@ -5079,7 +5079,7 @@ MonoBehaviour:
   stateWaddle: {fileID: 4977391603830286632}
   stateAirborne: {fileID: 6250249677574907779}
   stateBrake: {fileID: 2033783125199638335}
-  stateWallKick: {fileID: 0}
+  stateWallKick: {fileID: 7681839949767338094}
   START_POWER: 0
   START_POWER_LANDING: 10
   BOOST_MOD: 2
@@ -5096,6 +5096,9 @@ MonoBehaviour:
   SPEED_SLOPE_MUL: 0.6
   MOMENTUM_SLOPE_RESIST: 0.1
   DISTANCE_CHECK_SLOPE: 1.7
+  animNeutral: Armature|Slide
+  animLeft: Armature|TurnLeft
+  animRight: Armature|TurnRight
   timerLand: {fileID: 635188726415054169}
   sfxStart: {fileID: 5413555280917313618}
   sfxLoop: {fileID: 8635921498583761853}
@@ -5635,6 +5638,9 @@ MonoBehaviour:
   SPEED_SLOPE_MUL: 4
   MOMENTUM_SLOPE_RESIST: 0.2
   DISTANCE_CHECK_SLOPE: 1.7
+  animNeutral: Armature|Slide
+  animLeft: Armature|TurnLeft
+  animRight: Armature|TurnRight
   timerLand: {fileID: 2573270348832366426}
   sfxStart: {fileID: 3373556863323187855}
   sfxLoop: {fileID: 2077839875914008474}
@@ -6548,7 +6554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c7555f5db606748a283a65e22ec9bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
-  max: 5
+  max: 10
 --- !u!1 &5075095537192369375
 GameObject:
   m_ObjectHideFlags: 0
@@ -16853,7 +16859,7 @@ MonoBehaviour:
   stateExitAir: {fileID: 6250249677574907779}
   duration: {fileID: 6698815204659238674}
   kickStrength: 0.9
-  anim: Armature|Slide
+  anim: Armature|WallKick
   fxStart: {fileID: 1052116022143105914}
   fxTrailOptional: {fileID: 0}
   sfxEnterOptional: {fileID: 1762325106785045047}

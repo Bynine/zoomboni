@@ -28,6 +28,8 @@ public class Slide : State
     [SerializeField] private float MOMENTUM_SLOPE_RESIST = 0.1f;
     [SerializeField] private float DISTANCE_CHECK_SLOPE = 1.7f;
 
+    [SerializeField] private string animNeutral, animLeft, animRight;
+
     [SerializeField] private Timer timerLand;
 
     [SerializeField] protected AudioSource sfxStart;
@@ -39,7 +41,7 @@ public class Slide : State
 
     public override void Enter(Component statePrior)
     {
-        player.SetAnimation("Armature|Slide");
+        player.SetAnimation(animNeutral);
 
         startPowerMod = -1f;
         if (statePrior is Brake)
@@ -95,6 +97,20 @@ public class Slide : State
     {
         player.UpdateContainerForModelRotation(MODEL_TURN_SPEED * Time.deltaTime);
         Squash(timerLand);
+
+        Vector3 inputMovement = player.GetInputMovement();
+        if (Mathf.Sign(inputMovement.x) == -1)
+        {
+            player.SetAnimation(animLeft);
+        }
+        else if (Mathf.Sign(inputMovement.x) == 1)
+        {
+            player.SetAnimation(animRight);
+        }
+        else
+        {
+            player.SetAnimation(animNeutral);
+        }
     }
 
     public override void PhysicsUpdate()
