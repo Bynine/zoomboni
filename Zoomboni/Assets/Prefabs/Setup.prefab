@@ -757,7 +757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c7555f5db606748a283a65e22ec9bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
-  max: 5400
+  max: 7200
 --- !u!1 &7858004629320498734
 GameObject:
   m_ObjectHideFlags: 0
