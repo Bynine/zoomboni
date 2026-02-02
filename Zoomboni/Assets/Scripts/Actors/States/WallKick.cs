@@ -9,6 +9,7 @@ public class WallKick : State
     [SerializeField] private Timer duration;
 
     [SerializeField] private float kickStrength;
+    [SerializeField] private float kickStrengthY;
     [SerializeField] private string anim;
 
     [SerializeField] private ParticleSystem fxStart;
@@ -18,6 +19,7 @@ public class WallKick : State
     [SerializeField] private AudioSource sfxLoopOptional;
 
     public static float DISTANCE_TO_CHECK = 3.0f;
+    private bool wasGrounded = false;
 
     public override void Enter(Component arg)
     {
@@ -30,6 +32,8 @@ public class WallKick : State
         if (fxTrailOptional) fxTrailOptional.Play();
         if (sfxEnterOptional) sfxEnterOptional.Play();
         if (sfxLoopOptional) sfxLoopOptional.Play();
+
+        wasGrounded = !(arg is Airborne);
     }
 
     public override void Exit()
@@ -56,6 +60,7 @@ public class WallKick : State
                 Vector3 velocityNew = velocity;
                 velocityNew.y = 0;
                 velocityNew *= velocity.magnitude/velocityNew.magnitude;
+                if (!wasGrounded) velocityNew.y = kickStrengthY;
                 Vector3 angle = Vector3.Reflect(velocityNew.normalized, normal.normalized);
                 float power = kickStrength * velocityNew.magnitude;
                 velocity = angle * power;
