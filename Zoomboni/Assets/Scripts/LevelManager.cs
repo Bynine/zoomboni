@@ -10,7 +10,9 @@ public class LevelManager : MonoBehaviour
     public TextMeshProUGUI finishText;
     public TextMeshProUGUI timeText;
     public Timer timerLevelDuration;
+    public AudioSource music;
     public AudioSource sfxClean;
+    public float PITCH_MUSIC_URGENT = 1.2f;
 
     public PlayerInput playerInput;
 
@@ -105,6 +107,7 @@ public class LevelManager : MonoBehaviour
             if (timerLevelDuration.GetPercent() >= 0.8f)
             {
                 timeText.color = Color.red;
+                music.pitch = PITCH_MUSIC_URGENT;
             }
 
             timeText.text = "Time: " + timeRemaining;
