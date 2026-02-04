@@ -60,11 +60,6 @@ public class LevelManager : MonoBehaviour
             MAX_POINTS += collectable.GetScore();
         }
         ended = false;
-
-
-        PlayerPrefs.SetFloat("SCORE_1", 0);
-        PlayerPrefs.SetFloat("SCORE_2", 0);
-        PlayerPrefs.SetFloat("SCORE_3", 0);
     }
     public void AddPoints(int points)
     {
