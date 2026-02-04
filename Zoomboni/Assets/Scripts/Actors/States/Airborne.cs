@@ -8,6 +8,7 @@ public class Airborne : State
     [SerializeField] private Timer timerVolume;
 
     [SerializeField] private State stateLand;
+    [SerializeField] private State stateDive;
     [SerializeField] private State stateWallKick;
 
     [SerializeField] private float GRAVITY = 1.0f;
@@ -101,6 +102,10 @@ public class Airborne : State
         if (CanWallKick() && player.inputKick.WasPressedThisFrame())
         {
             stateMachine.Change(stateWallKick);
+        }
+        else if (player.inputSlide.WasPressedThisFrame())
+        {
+            stateMachine.Change(stateDive);
         }
     }
 }
