@@ -82,6 +82,8 @@
                 "value": "{\"m_Value\":true}"
             },
             {
+<<<<<<< HEAD
+=======
                 "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "editor.autoUpdatePreview",
                 "value": "{\"m_Value\":false}"
@@ -97,14 +99,19 @@
                 "value": "{\"m_Value\":true}"
             },
             {
+>>>>>>> main
                 "type": "System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "ShapeBuilder.ActiveShapeIndex",
-                "value": "{\"m_Value\":7}"
+                "value": "{\"m_Value\":3}"
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize.Cube",
+<<<<<<< HEAD
+                "value": "{\"m_Value\":{\"x\":-1.154541015625,\"y\":2.0642266273498537,\"z\":-0.2350616455078125}}"
+=======
                 "value": "{\"m_Value\":{\"x\":-6.22320556640625,\"y\":0.4870939254760742,\"z\":-17.520217895507814}}"
+>>>>>>> main
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -114,52 +121,64 @@
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize.Arch",
-                "value": "{\"m_Value\":{\"x\":10.0,\"y\":1.0,\"z\":1.0}}"
+                "value": "{\"m_Value\":{\"x\":-7.5308837890625,\"y\":-2.680450439453125,\"z\":-11.053604125976563}}"
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize.Door",
-                "value": "{\"m_Value\":{\"x\":-0.03386211395263672,\"y\":1.6384735107421876,\"z\":-0.00267791748046875}}"
+                "value": "{\"m_Value\":{\"x\":0.29892730712890627,\"y\":2.6757702827453615,\"z\":1.9758682250976563}}"
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize.Plane",
-                "value": "{\"m_Value\":{\"x\":-0.6133890151977539,\"y\":0.0,\"z\":-0.93231201171875}}"
+                "value": "{\"m_Value\":{\"x\":1.5001373291015626,\"y\":0.0,\"z\":-45.71812438964844}}"
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize.Cylinder",
+<<<<<<< HEAD
+                "value": "{\"m_Value\":{\"x\":0.6135711669921875,\"y\":0.118011474609375,\"z\":0.6768798828125}}"
+=======
                 "value": "{\"m_Value\":{\"x\":-11.190155029296875,\"y\":0.8859043121337891,\"z\":-13.152816772460938}}"
+>>>>>>> main
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize.Sphere",
+<<<<<<< HEAD
+                "value": "{\"m_Value\":{\"x\":9.801681518554688,\"y\":6.543815612792969,\"z\":-11.702102661132813}}"
+=======
                 "value": "{\"m_Value\":{\"x\":-0.5987396240234375,\"y\":0.6642770767211914,\"z\":0.549774169921875}}"
+>>>>>>> main
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize.Cone",
-                "value": "{\"m_Value\":{\"x\":5.7038116455078129,\"y\":6.723437786102295,\"z\":-4.619140625}}"
+                "value": "{\"m_Value\":{\"x\":0.3994293212890625,\"y\":0.7825345993041992,\"z\":0.507537841796875}}"
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize.Prism",
-                "value": "{\"m_Value\":{\"x\":-1.1851730346679688,\"y\":0.29436683654785159,\"z\":1.1335601806640626}}"
+                "value": "{\"m_Value\":{\"x\":0.9295730590820313,\"y\":0.7587423324584961,\"z\":-0.08843994140625}}"
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize.Torus",
-                "value": "{\"m_Value\":{\"x\":1.986297607421875,\"y\":5.308204650878906,\"z\":2.748382568359375}}"
+                "value": "{\"m_Value\":{\"x\":1.8143234252929688,\"y\":0.7638747096061707,\"z\":-1.4910430908203126}}"
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize.Pipe",
+<<<<<<< HEAD
+                "value": "{\"m_Value\":{\"x\":2.1930084228515627,\"y\":0.9013822674751282,\"z\":-1.9898834228515626}}"
+=======
                 "value": "{\"m_Value\":{\"x\":1.2189178466796876,\"y\":0.6236896514892578,\"z\":1.254119873046875}}"
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize.Sprite",
                 "value": "{\"m_Value\":{\"x\":7.09356689453125,\"y\":0.0,\"z\":-6.6005401611328129}}"
+>>>>>>> main
             },
             {
                 "type": "UnityEngine.Quaternion, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -214,11 +233,6 @@
             {
                 "type": "UnityEngine.Quaternion, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastRotation.Pipe",
-                "value": "{\"m_Value\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0}}"
-            },
-            {
-                "type": "UnityEngine.Quaternion, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                "key": "ShapeBuilder.LastRotation.Sprite",
                 "value": "{\"m_Value\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0}}"
             },
             {
@@ -279,11 +293,6 @@
             {
                 "type": "UnityEngine.ProBuilder.PivotLocation, Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.PivotLocation.Pipe",
-                "value": "{\"m_Value\":0}"
-            },
-            {
-                "type": "UnityEngine.ProBuilder.PivotLocation, Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                "key": "ShapeBuilder.PivotLocation.Sprite",
                 "value": "{\"m_Value\":0}"
             },
             {
@@ -362,11 +371,6 @@
                 "value": "{}"
             },
             {
-                "type": "UnityEngine.ProBuilder.Shapes.Shape, Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                "key": "ShapeBuilder.Sprite",
-                "value": "{}"
-            },
-            {
                 "type": "UnityEngine.ProBuilder.RectSelectMode, Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "editor.dragSelectRectMode",
                 "value": "{\"m_Value\":0}"
@@ -374,6 +378,9 @@
             {
                 "type": "UnityEngine.ProBuilder.SelectMode, Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "s_SelectMode",
+<<<<<<< HEAD
+                "value": "{\"m_Value\":4}"
+=======
                 "value": "{\"m_Value\":1}"
             },
             {
@@ -390,6 +397,7 @@
                 "type": "UnityEditor.ProBuilder.Actions.DetachFaces+DetachSetting, Unity.ProBuilder.Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "DetachFaces.target",
                 "value": "{\"m_Value\":0}"
+>>>>>>> main
             }
         ]
     }
