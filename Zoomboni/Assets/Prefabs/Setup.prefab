@@ -1077,7 +1077,9 @@ MonoBehaviour:
   timerLevelDuration: {fileID: 5085782074396439378}
   music: {fileID: 6782619321136725931}
   sfxClean: {fileID: 696378220733073724}
+  PITCH_MUSIC_NORMAL: 1
   PITCH_MUSIC_URGENT: 1.2
+  TIME_BONUS: 0.05
   playerInput: {fileID: 3069146338668308257}
 --- !u!1001 &172225626249555027
 PrefabInstance:
