@@ -249,6 +249,7 @@ public abstract class State : MonoBehaviour
 
         if (hit.collider != null)
         {
+            player.hit = hit;
             float angleDiff = Vector3.Angle(hit.normal, player.GetFacing());
 
             return angleDiff > MIN_ANGLE;

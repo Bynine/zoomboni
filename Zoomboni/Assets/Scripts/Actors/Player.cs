@@ -40,6 +40,7 @@ public class Player : Character
     internal Material mat_last_touched;
     internal bool focusing = false;
     internal Quaternion baseModelRotation;
+    internal RaycastHit hit;
 
     private new void Awake()
     {
