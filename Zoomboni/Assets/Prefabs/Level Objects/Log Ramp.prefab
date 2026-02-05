@@ -167,39 +167,39 @@ MonoBehaviour:
   - m_Vertices: 0f000000
   m_SharedTextures: []
   m_Positions:
-  - {x: -2.0849, y: 0, z: -2.5}
-  - {x: -2.0849, y: 0, z: 0}
+  - {x: -1.75, y: 0, z: -2.5}
+  - {x: -1.75, y: 0, z: 0}
   - {x: 0, y: 0, z: -2.5}
   - {x: 0, y: 0, z: 0}
-  - {x: -2.0849, y: 0, z: 0}
-  - {x: -2.0849, y: 0, z: 2.5}
+  - {x: -1.75, y: 0, z: 0}
+  - {x: -1.75, y: 0, z: 2.5}
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 2.5}
   - {x: 0, y: 0, z: -2.5}
   - {x: 0, y: 0, z: 0}
-  - {x: 2.0849, y: 0, z: -2.5}
-  - {x: 2.0849, y: 0, z: 0}
+  - {x: 1.7499983, y: -0.0000052205332, z: -2.5000057}
+  - {x: 1.75, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 2.5}
-  - {x: 2.0849, y: 0, z: 0}
-  - {x: 2.0849, y: 0, z: 2.5}
+  - {x: 1.75, y: 0, z: 0}
+  - {x: 1.75, y: 0, z: 2.5}
   m_Textures0:
-  - {x: -2.0849, y: -2.5}
-  - {x: -2.0849, y: 0}
+  - {x: -1.75, y: -2.5}
+  - {x: -1.75, y: 0}
   - {x: 0, y: -2.5}
   - {x: 0, y: 0}
-  - {x: -2.0849, y: 0}
-  - {x: -2.0849, y: 2.5}
+  - {x: -1.75, y: 0}
+  - {x: -1.75, y: 2.5}
   - {x: 0, y: 0}
   - {x: 0, y: 2.5}
   - {x: 0, y: -2.5}
   - {x: 0, y: 0}
-  - {x: 2.0849, y: -2.5}
-  - {x: 2.0849, y: 0}
+  - {x: 1.7499983, y: -2.5000057}
+  - {x: 1.75, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 2.5}
-  - {x: 2.0849, y: 0}
-  - {x: 2.0849, y: 2.5}
+  - {x: 1.75, y: 0}
+  - {x: 1.75, y: 2.5}
   m_Textures2: []
   m_Textures3: []
   m_Tangents:
@@ -211,9 +211,9 @@ MonoBehaviour:
   - {x: 1, y: 0, z: 0, w: -1}
   - {x: 1, y: 0, z: 0, w: -1}
   - {x: 1, y: 0, z: 0, w: -1}
-  - {x: 1, y: 0, z: 0, w: -1}
-  - {x: 1, y: 0, z: 0, w: -1}
-  - {x: 1, y: 0, z: 0, w: -1}
+  - {x: 1, y: -0.0000029831647, z: 0, w: -1}
+  - {x: 1, y: -0.0000014915823, z: 0, w: -1}
+  - {x: 1, y: -0.0000014915823, z: 0, w: -1}
   - {x: 1, y: 0, z: 0, w: -1}
   - {x: 1, y: 0, z: 0, w: -1}
   - {x: 1, y: 0, z: 0, w: -1}
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1061
+  m_VersionIndex: 1379
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -248,8 +248,8 @@ MonoBehaviour:
   m_Shape:
     rid: 4642042545913987210
   m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1061
-  m_Size: {x: 4.1698, y: 0, z: -5}
+  m_UnmodifiedMeshVersion: 1101
+  m_Size: {x: 3.5, y: 0, z: -5}
   m_LocalCenter: {x: 0, y: 0, z: 0}
   references:
     version: 2
@@ -297,7 +297,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -757,7 +757,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
