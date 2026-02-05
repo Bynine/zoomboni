@@ -58,19 +58,15 @@ public class WallKick : State
             velocityNew.y = 0;
             velocityNew *= velocity.magnitude / velocityNew.magnitude;
 
-            if (!wasGrounded)
-            {
-                velocityNew.y = kickStrengthY;
-            }
-            else
-            {
-                velocityNew.y = -5;
-            }
-
             Vector3 angle = Vector3.Reflect(player.GetFacing(), normal.normalized);
             float power = kickStrength * velocityNew.magnitude;
             velocity = angle * power;
             player.FlipModelRotation(velocity);
+
+            if (!wasGrounded)
+            {
+                velocity.y = kickStrengthY;
+            }
 
             player.cc.Move(velocity * Time.deltaTime);
         }

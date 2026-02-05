@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 5514826921750997648}
   - component: {fileID: 6047179910622676394}
   - component: {fileID: 7621548762047641525}
-  - component: {fileID: 7277086854965528720}
+  - component: {fileID: 173218011501716310}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -76,7 +76,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 2.59, z: 0}
-  m_LocalScale: {x: 11.347, y: 11.347, z: 11.347}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3918188739782151308}
@@ -159,7 +159,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7277086854965528720
+--- !u!114 &173218011501716310
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,9 +168,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7836163759372038220}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cbdbf2f1b70ebf4cbf71041d1ad2406, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e4106bd8e260454b81098a5e3284e3c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Bouncy
+  m_EditorClassIdentifier: Assembly-CSharp::BouncyMamaBear
+  model: {fileID: 1249687722414786436}
+  animator: {fileID: 1589248420252613382}
 --- !u!1001 &2132069101151877845
 PrefabInstance:
   m_ObjectHideFlags: 0
