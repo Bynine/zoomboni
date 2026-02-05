@@ -6056,7 +6056,7 @@ MonoBehaviour:
   BOUNCE_XZ_INIT: 0
   FIXED_BOUNCE_XZ_INIT: 0
   anim: Soar
-  fxStart: {fileID: 6977227891067508502, guid: ea4f56e3bdd796d4288da0b01a9da5d4, type: 3}
+  fxStart: {fileID: 1052116022143105914}
   fxTrailOptional: {fileID: 0}
   sfxEnterOptional: {fileID: 1367894307724014055}
   sfxLoopOptional: {fileID: 0}
