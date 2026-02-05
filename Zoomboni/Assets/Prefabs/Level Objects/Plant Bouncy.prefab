@@ -6744,6 +6744,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3366419086381590008, guid: 8ef3312348573409bbd18aed8f5642c9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3366419086381590008, guid: 8ef3312348573409bbd18aed8f5642c9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3366419086381590008, guid: 8ef3312348573409bbd18aed8f5642c9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3366419086381590008, guid: 8ef3312348573409bbd18aed8f5642c9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 98.29356
       objectReference: {fileID: 0}
@@ -6785,7 +6797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4779566860236859796, guid: 8ef3312348573409bbd18aed8f5642c9, type: 3}
       propertyPath: m_Name
-      value: Potted Plant Variant (1) Variant
+      value: Plant Bouncy
       objectReference: {fileID: 0}
     - target: {fileID: 5506536059232587416, guid: 8ef3312348573409bbd18aed8f5642c9, type: 3}
       propertyPath: 'm_SelectedFaces.Array.data[0]'

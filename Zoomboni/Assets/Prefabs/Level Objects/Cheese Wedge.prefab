@@ -312,7 +312,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -329,6 +329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cbdbf2f1b70ebf4cbf71041d1ad2406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bouncy
+  model: {fileID: 6503735248019985873}
 --- !u!135 &583406103098127393
 SphereCollider:
   m_ObjectHideFlags: 0
