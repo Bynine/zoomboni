@@ -887,7 +887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c7555f5db606748a283a65e22ec9bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
-  max: 7200
+  max: 10500
 --- !u!1 &7858004629320498734
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,7 +1077,7 @@ MonoBehaviour:
   timerLevelDuration: {fileID: 5085782074396439378}
   music: {fileID: 6782619321136725931}
   sfxClean: {fileID: 696378220733073724}
-  PITCH_MUSIC_NORMAL: 1
+  PITCH_MUSIC_NORMAL: 0.99
   PITCH_MUSIC_URGENT: 1.2
   TIME_BONUS: 0.05
   playerInput: {fileID: 3069146338668308257}
