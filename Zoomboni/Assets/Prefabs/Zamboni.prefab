@@ -5764,7 +5764,7 @@ MonoBehaviour:
   STICKY: -200
   GRAV: -4
   EXIT_SPEED: 4
-  MODEL_TURN_SPEED: 0.7
+  MODEL_TURN_SPEED: 1
   SLOPE_POWER: 16
   SPEED_SLOPE_MIN: 4
   SPEED_SLOPE_POW: 4
@@ -17106,12 +17106,12 @@ MonoBehaviour:
   stateDive: {fileID: 7466347088221712088}
   stateWallKick: {fileID: 7681839949767338094}
   GRAVITY: -12
-  ACCELERATION: 4.8
+  ACCELERATION: 8
   FRICTION: 0.996
   PITCH_MIN: 0.5
   PITCH_MAX: 2
   PITCH_RANGE: 16
-  MODEL_TURN_SPEED: 1.4
+  MODEL_TURN_SPEED: 3
   animNeutral: Armature|Slide
   animLeft: Armature|TurnLeft
   animRight: Armature|TurnRight

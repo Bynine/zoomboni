@@ -49,10 +49,10 @@ public class WallKick : State
 
     public override void PhysicsUpdate()
     {
-        Vector3 velocity = player.cc.velocity;
 
         if (duration.JustDeactivated())
         {
+            Vector3 velocity = player.storedMovement;
             Vector3 normal = player.hit.normal;
             Vector3 velocityNew = velocity;
             velocityNew.y = 0;

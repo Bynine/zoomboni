@@ -41,7 +41,7 @@ public class Player : Character
     internal bool focusing = false;
     internal Quaternion baseModelRotation;
     internal RaycastHit hit;
-
+    internal Vector3 storedMovement;
     private new void Awake()
     {
         base.Awake();
