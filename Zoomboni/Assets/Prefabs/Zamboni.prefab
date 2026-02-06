@@ -17046,8 +17046,8 @@ MonoBehaviour:
   stateExitGround: {fileID: 3009586430424134423}
   stateExitAir: {fileID: 6250249677574907779}
   duration: {fileID: 6698815204659238674}
-  kickStrength: 0.9
-  kickStrengthY: 5
+  kickStrength: 1.1
+  kickStrengthY: 6
   anim: Armature|WallKick
   fxStart: {fileID: 1052116022143105914}
   fxTrailOptional: {fileID: 0}

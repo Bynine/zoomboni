@@ -83,7 +83,7 @@ public class LevelManager : MonoBehaviour
         if (inputEscape.WasPressedThisFrame())
         {
             print("So long, fair well");
-            Application.Quit();
+            SceneManager.LoadScene("MainMenu");
         }
     }
 
