@@ -104,7 +104,7 @@
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize.Cube",
-                "value": "{\"m_Value\":{\"x\":8.78765869140625,\"y\":2.7657322883605959,\"z\":2.952301025390625}}"
+                "value": "{\"m_Value\":{\"x\":-1.85565185546875,\"y\":0.10461235046386719,\"z\":-2.82080078125}}"
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -124,12 +124,12 @@
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize.Plane",
-                "value": "{\"m_Value\":{\"x\":22.616209030151368,\"y\":0.0,\"z\":30.902359008789064}}"
+                "value": "{\"m_Value\":{\"x\":-2.6505584716796877,\"y\":0.0,\"z\":-1.695526123046875}}"
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize.Cylinder",
-                "value": "{\"m_Value\":{\"x\":-0.1594085693359375,\"y\":0.0663919448852539,\"z\":0.1538848876953125}}"
+                "value": "{\"m_Value\":{\"x\":-2.894653081893921,\"y\":0.5742610096931458,\"z\":2.3906712532043459}}"
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -154,7 +154,7 @@
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize.Pipe",
-                "value": "{\"m_Value\":{\"x\":1.2189178466796876,\"y\":0.6236896514892578,\"z\":1.254119873046875}}"
+                "value": "{\"m_Value\":{\"x\":-3.964416027069092,\"y\":0.771657407283783,\"z\":3.3382880687713625}}"
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
