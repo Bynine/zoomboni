@@ -9,6 +9,7 @@ public class WallKick : State
     [SerializeField] private Timer duration;
 
     [SerializeField] private float kickStrength;
+    [SerializeField] private float kickStrengthAir;
     [SerializeField] private float kickStrengthY;
     [SerializeField] private string anim;
 
@@ -59,7 +60,7 @@ public class WallKick : State
             velocityNew *= velocity.magnitude / velocityNew.magnitude;
 
             Vector3 angle = Vector3.Reflect(player.GetFacing(), normal.normalized);
-            float power = kickStrength * velocityNew.magnitude;
+            float power = (wasGrounded ? kickStrength : kickStrengthAir) * velocityNew.magnitude;
             velocity = angle * power;
             player.FlipModelRotation(velocity);
 
