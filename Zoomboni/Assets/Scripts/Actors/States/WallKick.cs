@@ -34,7 +34,7 @@ public class WallKick : State
         if (sfxEnterOptional) sfxEnterOptional.Play();
         if (sfxLoopOptional) sfxLoopOptional.Play();
 
-        wasGrounded = !(arg is Airborne);
+        wasGrounded = !(arg is Airborne) && !(arg is Dive);
     }
 
     public override void Exit()

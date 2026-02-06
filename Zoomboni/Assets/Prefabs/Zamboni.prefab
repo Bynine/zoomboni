@@ -16886,6 +16886,7 @@ MonoBehaviour:
   sfxLoop: {fileID: 7580540299354679734}
   fxLoop: {fileID: 6809552554129562009}
   stateLand: {fileID: 3009586430424134423}
+  stateWallKick: {fileID: 7681839949767338094}
   GRAVITY: -40
   ACCELERATION: 5
   FRICTION: 0.98
@@ -17047,7 +17048,7 @@ MonoBehaviour:
   stateExitAir: {fileID: 6250249677574907779}
   duration: {fileID: 6698815204659238674}
   kickStrength: 1
-  kickStrengthAir: 0.5
+  kickStrengthAir: 0.75
   kickStrengthY: 6
   anim: Armature|WallKick
   fxStart: {fileID: 1052116022143105914}

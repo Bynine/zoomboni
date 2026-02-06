@@ -7,6 +7,7 @@ public class Dive : State
     [SerializeField] protected ParticleSystem fxLoop;
 
     [SerializeField] private State stateLand;
+    [SerializeField] private State stateWallKick;
 
     [SerializeField] private float GRAVITY = 1.0f;
     [SerializeField] private float ACCELERATION = 1.0f;
@@ -49,6 +50,10 @@ public class Dive : State
         if (CheckSlide())
         {
             stateMachine.Change(stateLand);
+        }
+        if (CanWallKick() && player.inputKick.WasPressedThisFrame())
+        {
+            stateMachine.Change(stateWallKick);
         }
     }
 
