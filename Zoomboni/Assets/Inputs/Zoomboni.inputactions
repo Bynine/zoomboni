@@ -277,6 +277,28 @@
                 },
                 {
                     "name": "",
+                    "id": "d89959bc-b40f-4e61-9ca4-c5d98004a061",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Slide",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "48668a14-625f-486f-9cb7-29e48c4e1ffa",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Slide",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "36da6686-d172-45d8-abc2-e1b278d4e7c5",
                     "path": "<Keyboard>/k",
                     "interactions": "",
@@ -301,6 +323,28 @@
                     "name": "",
                     "id": "9ac568b5-dfc9-4ba8-907d-0b66fce3d52c",
                     "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Kick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "71e02340-2a35-4d97-b534-f7e82bd5e153",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Kick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "411efc05-c25d-44fa-843f-a93562d30de8",
+                    "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
