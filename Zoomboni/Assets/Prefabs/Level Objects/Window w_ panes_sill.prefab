@@ -2838,6 +2838,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 13.24
       objectReference: {fileID: 0}
+    - target: {fileID: 5260714759041436508, guid: 70c451c8557944a62bcf2a14d6c03cd0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6039997522636937727, guid: 70c451c8557944a62bcf2a14d6c03cd0, type: 3}
       propertyPath: m_Name
       value: Square Window
