@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 836335812526049265}
   - component: {fileID: 568571645971326989}
   - component: {fileID: 1920722800787814815}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mattress (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,7 +384,7 @@ GameObject:
   - component: {fileID: 3641562624512747920}
   - component: {fileID: 928152174342302326}
   - component: {fileID: 5814759133690161264}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bed Post 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -741,7 +741,7 @@ GameObject:
   - component: {fileID: 1797031206296851720}
   - component: {fileID: 6039011091003526715}
   - component: {fileID: 8339608146641645341}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mattress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1111,7 +1111,7 @@ GameObject:
   - component: {fileID: 7664593620591545113}
   - component: {fileID: 6833017602077963464}
   - component: {fileID: 4193193864531690681}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Blanket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1480,7 +1480,7 @@ GameObject:
   - component: {fileID: 4765923721822103454}
   - component: {fileID: 8192411734786198941}
   - component: {fileID: 1468415342472503932}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Headboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1836,7 +1836,7 @@ GameObject:
   - component: {fileID: 880883195796054801}
   - component: {fileID: 1195906042219651065}
   - component: {fileID: 5725075450012823389}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bed Post 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2192,7 +2192,7 @@ GameObject:
   - component: {fileID: 6986057706958940152}
   - component: {fileID: 563265044116637365}
   - component: {fileID: 4597164654199688643}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bed Post 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2544,7 +2544,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2982329929924145100}
   - component: {fileID: 6819169999177413211}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2611,7 +2611,7 @@ GameObject:
   - component: {fileID: 603733473187788558}
   - component: {fileID: 4256545625551446271}
   - component: {fileID: 3670496308034625318}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bed Post 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2968,7 +2968,7 @@ GameObject:
   - component: {fileID: 7778191385824094067}
   - component: {fileID: 8409944789715682431}
   - component: {fileID: 2915087080772560031}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pillow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
