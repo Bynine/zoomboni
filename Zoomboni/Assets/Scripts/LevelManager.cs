@@ -12,7 +12,10 @@ public class LevelManager : MonoBehaviour
     public Timer timerLevelDuration;
     public AudioSource music;
     public AudioSource sfxClean;
+
+    public float PITCH_MUSIC_NORMAL = 1.0f;
     public float PITCH_MUSIC_URGENT = 1.2f;
+    public float TIME_BONUS = 10.0f;
 
     public PlayerInput playerInput;
 
@@ -51,7 +54,7 @@ public class LevelManager : MonoBehaviour
         inputEscape = playerInput.actions.FindAction("Escape");
 
         MAX_POINTS = 0;
-        Collectable[] collectables = FindObjectsByType<Collectable>(FindObjectsSortMode.None);
+        Collectable[] collectables = FindObjectsByType<Collectable>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
         foreach(Collectable collectable in collectables)
         {
             MAX_POINTS += collectable.GetScore();
@@ -88,11 +91,11 @@ public class LevelManager : MonoBehaviour
     {
         if (points == MAX_POINTS)
         {
-            End(true);
+            End();
         }
         else if (timerLevelDuration.JustDeactivated())
         {
-            End(false);
+            End();
         }
         else if (timerLevelDuration.IsActive())
         {
@@ -116,61 +119,55 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    private void End(bool success)
+    private void End()
     {
         if (ended) return;
 
         ended = true;
         scoreText.text = "";
         timeText.text = "";
-        float TIME_N = timerLevelDuration.GetPercent() * timerLevelDuration.GetMax() / 60.0f;
-        TIME_N = Mathf.Round(TIME_N * 100.0f) / 100.0f;
+        float SCORE_N = points;
+        SCORE_N += (1.0f - timerLevelDuration.GetPercent()) * TIME_BONUS * timerLevelDuration.GetMax();
+        SCORE_N = Mathf.Round(SCORE_N);
+        music.pitch = PITCH_MUSIC_NORMAL;
 
-        if (success)
         {
             timerLevelDuration.End();
-            finishText.text = "Wow! You cleaned up in " + TIME_N + " seconds!\n Press R to reset!";
+            finishText.text = "Wow! You got a score of " + SCORE_N + "!\n Press R to reset!";
 
-            float TIME_1 = GetTime("1");
-            float TIME_2 = GetTime("2");
-            float TIME_3 = GetTime("3");
+            float SCORE_1 = GetScore("1");
+            float SCORE_2 = GetScore("2");
+            float SCORE_3 = GetScore("3");
 
-            if (TIME_N < TIME_1)
+            if (SCORE_N > SCORE_1)
             {
-                TIME_3 = TIME_2;
-                TIME_2 = TIME_1;
-                TIME_1 = TIME_N;
+                SCORE_3 = SCORE_2;
+                SCORE_2 = SCORE_1;
+                SCORE_1 = SCORE_N;
             }
-            else if (TIME_N < TIME_2)
+            else if (SCORE_N > SCORE_2)
             {
-                TIME_3 = TIME_2;
-                TIME_2 = TIME_N;
+                SCORE_3 = SCORE_2;
+                SCORE_2 = SCORE_N;
             }
-            else if (TIME_N < TIME_3)
+            else if (SCORE_N > SCORE_3)
             {
-                TIME_3 = TIME_N;
+                SCORE_3 = SCORE_N;
             }
 
-            Debug.Log("Best Times: 1: " + TIME_1 + ", 2: " + TIME_2 + ", 3: " + TIME_3);
-            PlayerPrefs.SetFloat("TIME_1", TIME_1 == float.MaxValue ? 0 : TIME_1);
-            PlayerPrefs.SetFloat("TIME_2", TIME_2 == float.MaxValue ? 0 : TIME_2);
-            PlayerPrefs.SetFloat("TIME_3", TIME_3 == float.MaxValue ? 0 : TIME_3);
+            Debug.Log("Best Scores: 1: " + SCORE_1 + ", 2: " + SCORE_2 + ", 3: " + SCORE_3);
+            PlayerPrefs.SetFloat("SCORE_1", SCORE_1 == float.MaxValue ? 0 : SCORE_1);
+            PlayerPrefs.SetFloat("SCORE_2", SCORE_2 == float.MaxValue ? 0 : SCORE_2);
+            PlayerPrefs.SetFloat("SCORE_3", SCORE_3 == float.MaxValue ? 0 : SCORE_3);
             PlayerPrefs.Save();
-        }
-
-        else
-        {
-
-            finishText.text = "Time out...\n Press R to reset!";
         }
         
     }
 
-    private float GetTime(string n)
+    private float GetScore(string n)
     {
-        float time = PlayerPrefs.GetFloat("TIME_" + n);
-        if (time == 0) return float.MaxValue;
-        else return time;
+        float score = PlayerPrefs.GetFloat("SCORE_" + n);
+        return score;
     }
 
 }

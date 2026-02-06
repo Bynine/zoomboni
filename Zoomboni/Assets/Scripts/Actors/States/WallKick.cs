@@ -18,7 +18,7 @@ public class WallKick : State
     [SerializeField] private AudioSource sfxEnterOptional;
     [SerializeField] private AudioSource sfxLoopOptional;
 
-    public static float DISTANCE_TO_CHECK = 3.0f;
+    public static float DISTANCE_TO_CHECK = 3.6f;
     private bool wasGrounded = false;
 
     public override void Enter(Component arg)
@@ -53,18 +53,19 @@ public class WallKick : State
 
         if (duration.JustDeactivated())
         {
-            RaycastHit hit = CheckSurface(new Vector3(0, player.cc.height / 2, 0), player.GetFacing(), DISTANCE_TO_CHECK);
-            if (hit.collider)
+            Vector3 normal = player.hit.normal;
+            Vector3 velocityNew = velocity;
+            velocityNew.y = 0;
+            velocityNew *= velocity.magnitude / velocityNew.magnitude;
+
+            Vector3 angle = Vector3.Reflect(player.GetFacing(), normal.normalized);
+            float power = kickStrength * velocityNew.magnitude;
+            velocity = angle * power;
+            player.FlipModelRotation(velocity);
+
+            if (!wasGrounded)
             {
-                Vector3 normal = hit.normal;
-                Vector3 velocityNew = velocity;
-                velocityNew.y = 0;
-                velocityNew *= velocity.magnitude/velocityNew.magnitude;
-                if (!wasGrounded) velocityNew.y = kickStrengthY;
-                Vector3 angle = Vector3.Reflect(velocityNew.normalized, normal.normalized);
-                float power = kickStrength * velocityNew.magnitude;
-                velocity = angle * power;
-                player.FlipModelRotation(velocity);
+                velocity.y = kickStrengthY;
             }
 
             player.cc.Move(velocity * Time.deltaTime);
