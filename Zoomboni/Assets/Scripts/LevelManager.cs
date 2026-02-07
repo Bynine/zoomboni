@@ -60,6 +60,7 @@ public class LevelManager : MonoBehaviour
             MAX_POINTS += collectable.GetScore();
         }
         ended = false;
+        music.pitch = PITCH_MUSIC_NORMAL;
 
         float SCORE_1 = GetScore("1");
         if (SCORE_1 == 0){ // Set initial scores
