@@ -9,9 +9,14 @@ public class LevelManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI finishText;
     public TextMeshProUGUI timeText;
+    public TextMeshProUGUI cleanText;
+
     public Timer timerLevelDuration;
+    public Timer timerCleanText;
+
     public AudioSource music;
     public AudioSource sfxClean;
+    public AudioSource sfxCleanAll;
 
     public float PITCH_MUSIC_NORMAL = 1.0f;
     public float PITCH_MUSIC_URGENT = 1.2f;
@@ -50,6 +55,7 @@ public class LevelManager : MonoBehaviour
 
         finishText.text = "";
         timerLevelDuration.Reset();
+        timerCleanText.End();
         inputReset = playerInput.actions.FindAction("Reset");
         inputEscape = playerInput.actions.FindAction("Escape");
 
@@ -123,7 +129,9 @@ public class LevelManager : MonoBehaviour
 
             timeText.text = "Time: " + timeRemaining;
 
-            scoreText.text = "Points: " + points + "/" + MAX_POINTS;
+            scoreText.text = "Points: " + points;
+
+            cleanText.gameObject.SetActive(timerCleanText.IsActive());
         }
     }
 
@@ -176,6 +184,13 @@ public class LevelManager : MonoBehaviour
     {
         float score = PlayerPrefs.GetFloat("SCORE_" + n);
         return score;
+    }
+
+    public void SetAllCleaned(JamCollection jamCollection)
+    {
+        cleanText.text = jamCollection.label + " is squeaky-clean!";
+        timerCleanText.Reset();
+        sfxCleanAll.Play();
     }
 
 }
