@@ -18,6 +18,8 @@ public class MainMenu : MonoBehaviour
     public RawImage controlsSelectedBear;
     public RawImage exitSelectedBear;
 
+    public Canvas mainMenuCanvas;
+    public Canvas controlsCanvas;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,6 +29,9 @@ public class MainMenu : MonoBehaviour
        highScoreThreeText.text = PlayerPrefs.GetFloat("SCORE_3").ToString("0"); 
    
        UpdateMenuCursor();
+       
+       mainMenuCanvas.enabled=true;
+       controlsCanvas.enabled=false;
     }
 
     void Update()
@@ -43,13 +48,20 @@ public class MainMenu : MonoBehaviour
     //Function to view the controls
     public void OpenControls()
     {
-
+       mainMenuCanvas.enabled=false;
+       controlsCanvas.enabled=true;
     }
 
     // Function to exit the game.
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void CloseControls()
+    {
+       mainMenuCanvas.enabled=true;
+       controlsCanvas.enabled=false;
     }
 
     private void UpdateMenuCursor()
