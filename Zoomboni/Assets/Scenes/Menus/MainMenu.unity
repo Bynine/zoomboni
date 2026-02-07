@@ -702,6 +702,7 @@ GameObject:
   - component: {fileID: 458667946}
   - component: {fileID: 458667945}
   - component: {fileID: 458667944}
+  - component: {fileID: 458667947}
   m_Layer: 5
   m_Name: Exit Button
   m_TagString: Untagged
@@ -821,6 +822,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 458667942}
   m_CullTransparentMesh: 1
+--- !u!114 &458667947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458667942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 852535174}
+          m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+          m_MethodName: UpdateMenuCursor
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &486765108
 GameObject:
   m_ObjectHideFlags: 0
@@ -1355,6 +1385,7 @@ MonoBehaviour:
   startButton: {fileID: 860233141}
   controlsButton: {fileID: 1986654613}
   exitButton: {fileID: 458667942}
+  backButton: {fileID: 1261988187}
   startSelectedBear: {fileID: 59590728}
   controlsSelectedBear: {fileID: 790415564}
   exitSelectedBear: {fileID: 488809579}
@@ -1372,6 +1403,7 @@ GameObject:
   - component: {fileID: 860233145}
   - component: {fileID: 860233144}
   - component: {fileID: 860233143}
+  - component: {fileID: 860233146}
   m_Layer: 5
   m_Name: Start Button
   m_TagString: Untagged
@@ -1491,6 +1523,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 860233141}
   m_CullTransparentMesh: 1
+--- !u!114 &860233146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860233141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 852535174}
+          m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+          m_MethodName: UpdateMenuCursor
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &864519245
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,7 +1844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
-    m_Mode: 0
+    m_Mode: -1
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -3005,6 +3066,7 @@ GameObject:
   - component: {fileID: 1986654617}
   - component: {fileID: 1986654616}
   - component: {fileID: 1986654615}
+  - component: {fileID: 1986654618}
   m_Layer: 5
   m_Name: Controls Button
   m_TagString: Untagged
@@ -3124,6 +3186,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1986654613}
   m_CullTransparentMesh: 1
+--- !u!114 &1986654618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986654613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 852535174}
+          m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+          m_MethodName: UpdateMenuCursor
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

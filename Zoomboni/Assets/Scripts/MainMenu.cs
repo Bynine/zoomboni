@@ -10,9 +10,10 @@ public class MainMenu : MonoBehaviour
     public TextMeshProUGUI highScoreTwoText;
     public TextMeshProUGUI highScoreThreeText;
 
-    public GameObject startButton;
+    public GameOnject startButton;
     public GameObject controlsButton;
     public GameObject exitButton;
+    public GameObject backButton;
 
     public RawImage startSelectedBear;
     public RawImage controlsSelectedBear;
@@ -50,6 +51,10 @@ public class MainMenu : MonoBehaviour
     {
        mainMenuCanvas.enabled=false;
        controlsCanvas.enabled=true;
+//       startButton.enabled=false;
+//       controlsButton.enabled=false;
+//       exitButton.enabled=false;
+//       backButton.enabled=true;
     }
 
     // Function to exit the game.
@@ -62,21 +67,23 @@ public class MainMenu : MonoBehaviour
     {
        mainMenuCanvas.enabled=true;
        controlsCanvas.enabled=false;
+//       startButton.enabled=true;
+//       controlsButton.enabled=true;
+//       exitButton.enabled=true;
+//       backButton.enabled=false;
     }
 
-    private void UpdateMenuCursor()
+    public void UpdateMenuCursor()
     {
         if(EventSystem.current.currentSelectedGameObject == startButton){
             startSelectedBear.enabled=true;
             controlsSelectedBear.enabled=false;
             exitSelectedBear.enabled=false;
-        }
-        if(EventSystem.current.currentSelectedGameObject == controlsButton){
+        } else if(EventSystem.current.currentSelectedGameObject == controlsButton){
             startSelectedBear.enabled=false;
             controlsSelectedBear.enabled=true;
             exitSelectedBear.enabled=false;
-        }
-        if(EventSystem.current.currentSelectedGameObject == exitButton){
+        } else if(EventSystem.current.currentSelectedGameObject == exitButton){
             startSelectedBear.enabled=false;
             controlsSelectedBear.enabled=false;
             exitSelectedBear.enabled=true;
