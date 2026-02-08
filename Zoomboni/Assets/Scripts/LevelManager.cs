@@ -71,8 +71,8 @@ public class LevelManager : MonoBehaviour
         float SCORE_1 = GetScore("1");
         if (SCORE_1 == 0){ // Set initial scores
             Debug.Log("Setting initial scores");
-            PlayerPrefs.SetFloat("SCORE_1", 400);
-            PlayerPrefs.SetFloat("SCORE_2", 250);
+            PlayerPrefs.SetFloat("SCORE_1", 600);
+            PlayerPrefs.SetFloat("SCORE_2", 300);
             PlayerPrefs.SetFloat("SCORE_3", 100);
             PlayerPrefs.Save();
         }
@@ -95,7 +95,7 @@ public class LevelManager : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-        if (ended && inputEscape.WasPressedThisFrame())
+        if (inputEscape.WasPressedThisFrame())
         {
             SceneManager.LoadScene("MainMenu");
         }
