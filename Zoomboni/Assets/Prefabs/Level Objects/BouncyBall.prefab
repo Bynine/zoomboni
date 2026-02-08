@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6793361079224730563, guid: 3fcccc9e4b91bd54a83515cf2e971378, type: 3}
+      propertyPath: START_VELOCITY_XZ
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6879106642517593211, guid: 3fcccc9e4b91bd54a83515cf2e971378, type: 3}
       propertyPath: m_LocalPosition.x
       value: 159.68759
@@ -58,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7461738319646607642, guid: 3fcccc9e4b91bd54a83515cf2e971378, type: 3}
       propertyPath: m_Name
-      value: BouncyBall Variant
+      value: BouncyBall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
