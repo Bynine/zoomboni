@@ -71,6 +71,7 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    // Return to the main menu from the controls menu
     public void CloseControls()
     {
        mainMenuCanvas.enabled=true;
@@ -82,6 +83,7 @@ public class MainMenu : MonoBehaviour
        controlsButtonB.Select();
     }
 
+    // Hide and show cursor images depending on which button is selected
     public void UpdateMenuCursor()
     {
         if(EventSystem.current.currentSelectedGameObject == startButton){
@@ -103,5 +105,35 @@ public class MainMenu : MonoBehaviour
             backSelectedBear.enabled=false;
         }
             
+    }
+
+    // Update cursor on mouse over
+    public void StartButtonMouseOver()
+    {
+        Debug.Log("Start Mouse Over");
+        startSelectedBear.enabled=true;
+        controlsSelectedBear.enabled=false;
+        exitSelectedBear.enabled=false;
+        startButtonB.Select();
+    }
+    
+    // Update cursor on mouse over
+    public void ControlsButtonMouseOver()
+    {
+        Debug.Log("Controls Mouse Over");
+        startSelectedBear.enabled=false;
+        controlsSelectedBear.enabled=true;
+        exitSelectedBear.enabled=false;
+        controlsButtonB.Select();
+    }
+
+    // Update cursor on mouse over
+    public void ExitButtonMouseOver()
+    {
+        Debug.Log("Exit Mouse Over");
+        startSelectedBear.enabled=false;
+        controlsSelectedBear.enabled=false;
+        exitSelectedBear.enabled=true;
+        exitButtonB.Select();
     }
 }
