@@ -10,14 +10,20 @@ public class MainMenu : MonoBehaviour
     public TextMeshProUGUI highScoreTwoText;
     public TextMeshProUGUI highScoreThreeText;
 
-    public GameOnject startButton;
+    public GameObject startButton;
     public GameObject controlsButton;
     public GameObject exitButton;
     public GameObject backButton;
 
+    public Button startButtonB;
+    public Button controlsButtonB;
+    public Button exitButtonB;
+    public Button backButtonB;
+    
     public RawImage startSelectedBear;
     public RawImage controlsSelectedBear;
     public RawImage exitSelectedBear;
+    public RawImage backSelectedBear;
 
     public Canvas mainMenuCanvas;
     public Canvas controlsCanvas;
@@ -33,11 +39,12 @@ public class MainMenu : MonoBehaviour
        
        mainMenuCanvas.enabled=true;
        controlsCanvas.enabled=false;
+       backButtonB.enabled=false;
     }
 
     void Update()
     {
-       UpdateMenuCursor();
+        UpdateMenuCursor();
     }
 
     // Function to start the game when users press the start button
@@ -51,10 +58,11 @@ public class MainMenu : MonoBehaviour
     {
        mainMenuCanvas.enabled=false;
        controlsCanvas.enabled=true;
-//       startButton.enabled=false;
-//       controlsButton.enabled=false;
-//       exitButton.enabled=false;
-//       backButton.enabled=true;
+       startButtonB.enabled=false;
+       controlsButtonB.enabled=false;
+       exitButtonB.enabled=false;
+       backButtonB.enabled=true;
+       backButtonB.Select();
     }
 
     // Function to exit the game.
@@ -67,10 +75,11 @@ public class MainMenu : MonoBehaviour
     {
        mainMenuCanvas.enabled=true;
        controlsCanvas.enabled=false;
-//       startButton.enabled=true;
-//       controlsButton.enabled=true;
-//       exitButton.enabled=true;
-//       backButton.enabled=false;
+       startButtonB.enabled=true;
+       controlsButtonB.enabled=true;
+       exitButtonB.enabled=true;
+       backButtonB.enabled=false;
+       controlsButtonB.Select();
     }
 
     public void UpdateMenuCursor()
@@ -88,5 +97,11 @@ public class MainMenu : MonoBehaviour
             controlsSelectedBear.enabled=false;
             exitSelectedBear.enabled=true;
         }
+        if(EventSystem.current.currentSelectedGameObject == backButton){
+            backSelectedBear.enabled=true;
+        } else {
+            backSelectedBear.enabled=false;
+        }
+            
     }
 }
